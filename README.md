@@ -4,6 +4,7 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 ## Task 1: Transfer Impact Assessment - Söderstad University Hospital AI Radiology System
 
 ### 1. Data Flow Sketch
+* Controller: Söderstad University Hostpital
 
 ### 2. Risk Analysis
 
@@ -278,7 +279,9 @@ if __name__ == '__main__':
 
 ### 2. Anonymized CSV
 #### mdav_output_k4_zscore
+
 Iteration 1:
+
 |   ID |   Age | Sex   |     ZIP |   SystolicBP |    BMI | Diagnosis    |
 |-----:|------:|:------|--------:|-------------:|-------:|:-------------|
 |    1 | 27    | *     | 53116   |        108   | 27.1   | Hypertension |
@@ -323,6 +326,7 @@ Iteration 1:
 |   40 | 64.75 | *     | 53117.8 |        121.5 | 28.675 | Hypertension |
 
 Iteration 2:
+
 |   ID |   Age | Sex   |     ZIP |   SystolicBP |    BMI | Diagnosis    |
 |-----:|------:|:------|--------:|-------------:|-------:|:-------------|
 |    1 | 27    | *     | 53116   |       108    | 27.1   | Hypertension |
@@ -367,49 +371,7 @@ Iteration 2:
 |   40 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Hypertension |
 
 Iteration 3:
-|   ID |   Age | Sex   |     ZIP |   SystolicBP |    BMI | Diagnosis    |
-|-----:|------:|:------|--------:|-------------:|-------:|:-------------|
-|    1 | 27    | *     | 53116   |       108    | 27.1   | Hypertension |
-|    2 | 66    | *     | 53118   |       123    | 25.2   | Migraine     |
-|    3 | 59    | *     | 53118   |       126    | 22.8   | Asthma       |
-|    4 | 47    | *     | 53116   |       108    | 24.9   | Diabetes     |
-|    5 | 35.5  | *     | 53117.8 |       107.25 | 24.075 | Migraine     |
-|    6 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Cancer       |
-|    7 | 26    | *     | 53116   |        90    | 25.1   | Diabetes     |
-|    8 | 61    | *     | 53116   |       127    | 26.4   | Diabetes     |
-|    9 | 33    | *     | 53117   |       101    | 27.2   | Cancer       |
-|   10 | 28.75 | *     | 53116   |        93    | 21.625 | Flu          |
-|   11 | 52    | *     | 53115   |       122    | 23.2   | Hypertension |
-|   12 | 71.75 | *     | 53115.5 |       128.5  | 24.325 | Diabetes     |
-|   13 | 63    | *     | 53118   |       130    | 24.6   | Cancer       |
-|   14 | 65    | *     | 53117   |       124    | 22.3   | Migraine     |
-|   15 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Asthma       |
-|   16 | 66    | *     | 53118   |       125    | 25.3   | Diabetes     |
-|   17 | 51    | *     | 53117   |       100    | 21.1   | Cancer       |
-|   18 | 28.75 | *     | 53116   |        93    | 21.625 | Hypertension |
-|   19 | 69    | *     | 53115   |       114    | 26.8   | Hypertension |
-|   20 | 47    | *     | 53115   |       104    | 26.6   | Hypertension |
-|   21 | 50    | *     | 53117   |       120    | 29.7   | Cancer       |
-|   22 | 43    | *     | 53117   |       103    | 31.5   | Diabetes     |
-|   23 | 35.5  | *     | 53117.8 |       107.25 | 24.075 | Flu          |
-|   24 | 74    | *     | 53118   |       143    | 23.9   | Hypertension |
-|   25 | 66    | *     | 53117   |       122    | 20.5   | Hypertension |
-|   26 | 58    | *     | 53117   |       128    | 25.9   | Diabetes     |
-|   27 | 44    | *     | 53117   |       103    | 22.2   | Asthma       |
-|   28 | 71.75 | *     | 53115.5 |       128.5  | 24.325 | Hypertension |
-|   29 | 53    | *     | 53115   |       108    | 23.4   | Diabetes     |
-|   30 | 47    | *     | 53116   |       111    | 24.1   | Cancer       |
-|   31 | 47    | *     | 53115   |       123    | 27.2   | Flu          |
-|   32 | 28.75 | *     | 53116   |        93    | 21.625 | Asthma       |
-|   33 | 35.5  | *     | 53117.8 |       107.25 | 24.075 | Diabetes     |
-|   34 | 53    | *     | 53115   |       120    | 22.3   | Migraine     |
-|   35 | 71.75 | *     | 53115.5 |       128.5  | 24.325 | Migraine     |
-|   36 | 28.75 | *     | 53116   |        93    | 21.625 | Migraine     |
-|   37 | 71.75 | *     | 53115.5 |       128.5  | 24.325 | Cancer       |
-|   38 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Migraine     |
-|   39 | 35.5  | *     | 53117.8 |       107.25 | 24.075 | Flu          |
-|   40 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Hypertension |
-PS P:\Master\Sem3\MAIO\Assigment\MAIO_Assignment2> & C:/Python313/python.exe p:/Master/Sem3/MAIO/Assigment/MAIO_Assignment2/test.py
+
 |   ID |   Age | Sex   |     ZIP |   SystolicBP |    BMI | Diagnosis    |
 |-----:|------:|:------|--------:|-------------:|-------:|:-------------|
 |    1 | 33.25 | *     | 53116.2 |       101.75 | 26.075 | Hypertension |
@@ -454,6 +416,7 @@ PS P:\Master\Sem3\MAIO\Assigment\MAIO_Assignment2> & C:/Python313/python.exe p:/
 |   40 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Hypertension |
 
 Iteration 4:
+
 |   ID |   Age | Sex   |     ZIP |   SystolicBP |    BMI | Diagnosis    |
 |-----:|------:|:------|--------:|-------------:|-------:|:-------------|
 |    1 | 33.25 | *     | 53116.2 |       101.75 | 26.075 | Hypertension |
@@ -498,6 +461,7 @@ Iteration 4:
 |   40 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Hypertension |
 
 Final File:
+
 |   ID |   Age | Sex   |     ZIP |   SystolicBP |    BMI | Diagnosis    |
 |-----:|------:|:------|--------:|-------------:|-------:|:-------------|
 |    1 | 33.25 | *     | 53116.2 |       101.75 | 26.075 | Hypertension |
@@ -542,6 +506,7 @@ Final File:
 |   40 | 64.75 | *     | 53117.8 |       121.5  | 28.675 | Hypertension |
 
 Cluster Summary:
+
 |   ClusterID |   Age | Diagnosis                             |     ZIP |   SystolicBP |    BMI |
 |------------:|------:|:--------------------------------------|--------:|-------------:|-------:|    
 |           1 | 28.75 | Asthma,Flu,Hypertension,Migraine      | 53116   |        93    | 21.625 |    
