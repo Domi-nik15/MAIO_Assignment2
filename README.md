@@ -14,7 +14,9 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 ## Task 2: MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm
 
 ### 1. Code
-The following code implements the MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm.  
+The following code implements the MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm.
+For the other tests performed, see GitHub repository: https://github.com/Domi-nik15/MAIO_Assignment2
+
 **Source:** [`mdav_prg.py`](./mdav_prg.py)
 
 ```python
