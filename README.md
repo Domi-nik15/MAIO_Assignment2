@@ -1,14 +1,26 @@
 # MAIO_Assignment 2
+
 Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 ## Task 1: Transfer Impact Assessment - Söderstad University Hospital AI Radiology System
 
 ### 1. Data Flow Sketch
-* Controller: Söderstad University Hostpital
+
+* Controller: Söderstad University Hostpital (Sweden, EU).
+* Processor: MedAI Cloud GmbH (Frankfurt, EU).
+* Sub-processor (support, break-glass): MedAI Inc. (USA).
+* Flow:
+  * DICOM images + metadata sent from PACS to MedAI Cloud (EU).
+  * Routine training/inference hosted in EU.
+  * In rare "break-glass" incidents, MedAI Inc. (USA) may be granted temporary, read-only access to data hosted in the EU.
+  * Access is audited, requires explicit approval and is limited in scope/time.
+  * There is no routine storage in the USA. The Access is only transient.
+
+![Data Flow Sketch](images/DataFlow.svg)
 
 ### 2. Risk Analysis
 
-**1. Destination-country laws/practices (USA)** 
+### 1. Destination-country laws/practices (USA)
 
 **Risk R1 — Government access during a support session.**
 
@@ -32,7 +44,7 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 ---
 
-**2. Nature of data (special category: health)**
+#### 2. Nature of data (special category: health)
 
 **Risk R3 — Special-category health data with potentially broad scope.**
 
@@ -46,7 +58,7 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 ---
 
-**3. Attacker model (technical/organizational threats)**
+#### 3. Attacker model (technical/organizational threats)
 
 **Risk R4 — Unintentional exfiltration during the session (downloads, log export, screenshot).**
 
@@ -98,7 +110,6 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 **Impact:** Medium–High (expands the personal-data footprint; correlation risks).
 
-
 ### 3. Transfer Tool & Safeguards
 
 ### 4. Conclusion & Accountability
@@ -106,8 +117,10 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 ## Task 2: MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm
 
 ### 1. Code
+
 The following code implements the MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm.
-For the other tests performed, see GitHub repository: https://github.com/Domi-nik15/MAIO_Assignment2
+
+For the other tests performed, see GitHub repository: <https://github.com/Domi-nik15/MAIO_Assignment2>
 
 **Source:** [`mdav_prg.py`](./mdav_prg.py)
 
@@ -369,6 +382,7 @@ if __name__ == '__main__':
 ```
 
 ### 2. Anonymized CSV
+
 #### mdav_output_k4_zscore
 
 Iteration 1:
@@ -664,15 +678,18 @@ Quasi-identifiers used (distance computation): ['Age', 'ZIP', 'SystolicBP', 'BMI
 k (anonymity parameter): 4
 
 Method notes:
- - The values of the insensitive columns were suppressed to '*'.
- - Scaling used for distance computations: zscore
- - MDAV procedure: while |R| >= 3k: pick centroid of R, find farthest A, farthest B from A, form k-nearest groups around A and B. Then handle remainder.
+
+* The values of the insensitive columns were suppressed to '*'.
+* Scaling used for distance computations: zscore
+* MDAV procedure: while |R| >= 3k: pick centroid of R, find farthest A, farthest B from A, form k-nearest groups around A and B. Then handle remainder.
 
 Privacy check:
- - number of clusters formed: 10
- - cluster sizes (ClusterID: size): {1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4}
- - privacy satisfied (every cluster size >= k): True
+
+* number of clusters formed: 10
+* cluster sizes (ClusterID: size): {1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4}
+* privacy satisfied (every cluster size >= k): True
 
 Quality metrics:
- - SSE (sum of squared errors) in original QI space: 2998.992500
- - average cluster radius (mean of per-cluster avg distances): 12.100648
+
+* SSE (sum of squared errors) in original QI space: 2998.992500
+* average cluster radius (mean of per-cluster avg distances): 12.100648
