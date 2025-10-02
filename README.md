@@ -112,6 +112,67 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 ### 3. Transfer Tool & Safeguards
 
+## 3.1 Transfer Tool (GDPR Art. 46)
+
+- **Legal mechanism:** Standard Contractual Clauses (SCCs, 2021 version, modular format).
+- **Controller–Processor relationship:**
+  - Söderstad University Hospital (Controller, EU)
+  - MedAI Cloud GmbH (Processor, EU)
+  - MedAI Inc. (Sub-processor, US, under limited emergency access)
+- **Relevant Articles:**
+  - GDPR Art. 46(2)(c): SCCs as an appropriate safeguard for international transfers.
+  - GDPR Recital 108: SCCs ensure enforceable rights and effective remedies for data subjects.
+
+## 3.2 Schrems II Context
+
+- **CJEU ruling (C-311/18, Schrems II):**
+  - SCCs remain valid in principle.
+  - However, data exporters must verify whether the law of the destination country ensures adequate protection in practice.
+  - If not, **supplementary measures** must be applied.
+
+- **US-specific risks:**
+  - **FISA Section 702**: Allows US authorities to compel access to data from electronic communications service providers.
+  - **Executive Order 12333**: Broad authority for US intelligence collection outside the US.
+  - **Problem:** Health data processed by MedAI Inc. could theoretically be subject to surveillance, even if risk is low due to medical context.
+
+## 3.3 Evaluation of SCCs’ Effectiveness
+
+- **Strengths:**
+  - SCCs provide legally binding obligations between EU controller and US sub-processor.
+  - Data subjects can enforce rights under EU law and SCCs clauses.
+  - Requires transparency on sub-processor engagements.
+
+- **Limitations:**
+  - SCCs do not prevent disproportionate government access under US law.
+  - Schrems II requires case-by-case assessment: Are additional safeguards needed?
+
+## 3.4 Supplementary Measures
+
+To strengthen protection, the following **technical, organizational, and contractual safeguards** are applied:
+
+### Technical Measures
+- **Encryption at rest and in transit**
+  - AES-256 for stored data, TLS 1.2+ for data in transit.
+  - Keys held exclusively within the EU; never shared with US entities.
+- **Data minimization**
+  - US sub-processor access is restricted to the minimum data required for break-glass support (read-only, targeted access).
+- **Access controls**
+  - Role-based access with multi-factor authentication (MFA).
+  - Session logging and real-time monitoring.
+- **Audit trails**
+  - All break-glass access is logged, timestamped, and reviewed by the EU hospital DPO.
+
+### Organizational Measures
+- **Approval process**
+  - Any break-glass access requires explicit authorization by Söderstad Hospital’s controller before activation.
+- **EU-only key management**
+  - Cryptographic keys remain under hospital/EU control to prevent unilateral access.
+- **Staff training**
+  - MedAI personnel (both EU and US) receive GDPR and HIPAA-equivalent privacy/security training.
+- **Data retention limits**
+  - Operational logs retained only as long as necessary for audit and compliance.
+  - Clear complaint channels for data subjects to enforce their rights.
+
 ### 4. Conclusion & Accountability
 
 ## Task 2: MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm
