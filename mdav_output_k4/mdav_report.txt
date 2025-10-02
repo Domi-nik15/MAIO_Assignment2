@@ -1,0 +1,18 @@
+MDAV microaggregation report
+Input file rows: 40
+Quasi-identifiers used (distance computation): ['Age', 'ZIP', 'SystolicBP', 'BMI']
+k (anonymity parameter): 4
+
+Method notes:
+ - The values of the insensitive columns were suppressed to '*'.
+ - Scaling used for distance computations: minmax
+ - MDAV procedure: while |R| >= 3k: pick centroid of R, find farthest A, farthest B from A, form k-nearest groups around A and B. Then handle remainder.
+
+Privacy check:
+ - number of clusters formed: 10
+ - cluster sizes (ClusterID: size): {1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4}
+ - privacy satisfied (every cluster size >= k): True
+
+Quality metrics:
+ - SSE (sum of squared errors) in original QI space: 3404.592500
+ - average cluster radius (mean of per-cluster avg distances): 13.018028

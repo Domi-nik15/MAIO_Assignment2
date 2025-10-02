@@ -1,0 +1,11 @@
+ClusterID,Age,Diagnosis,ZIP,SystolicBP,BMI
+1,28.75,"Asthma,Flu,Hypertension,Migraine",53116.0,93.0,21.625
+2,64.75,"Asthma,Cancer,Hypertension,Migraine",53117.75,121.5,28.674999999999997
+3,35.5,"Diabetes,Flu,Migraine",53117.75,107.25,24.075000000000003
+4,71.75,"Cancer,Diabetes,Hypertension,Migraine",53115.5,128.5,24.325000000000003
+5,65.5,"Asthma,Cancer,Diabetes,Hypertension",53118.0,131.0,24.15
+6,33.25,"Cancer,Diabetes,Hypertension",53116.25,101.75,26.075000000000003
+7,46.75,"Cancer,Diabetes,Flu,Hypertension",53116.0,112.5,28.750000000000004
+8,62.0,"Cancer,Hypertension,Migraine",53117.25,117.25,22.275
+9,49.25,"Asthma,Cancer,Diabetes,Migraine",53115.75,110.5,22.999999999999996
+10,60.0,"Diabetes,Hypertension",53115.75,122.75,25.574999999999996
