@@ -4,19 +4,22 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 ## Task 1: Transfer Impact Assessment - Söderstad University Hospital AI Radiology System
 
+* **Controller**: Söderstad University Hostpital (Sweden, EU).
+* **Processor**: MedAI Cloud GmbH (Frankfurt, EU).
+* **Sub-processor**: (support, break-glass): MedAI Inc. (USA).
+* **Purpose of Transfer**: Break-glass, read-only support for rare incidents concerning the AI Radiology Alerting Service.
+* **Transfer Tool (Art. 46)**: Standard Contractual Clauses (SCCs).
+
 ### 1. Data Flow Sketch
 
-* Controller: Söderstad University Hostpital (Sweden, EU).
-* Processor: MedAI Cloud GmbH (Frankfurt, EU).
-* Sub-processor (support, break-glass): MedAI Inc. (USA).
-* Flow:
-  * DICOM images + metadata sent from PACS to MedAI Cloud (EU).
-  * Routine training/inference hosted in EU.
-  * In rare "break-glass" incidents, MedAI Inc. (USA) may be granted temporary, read-only access to data hosted in the EU.
-  * Access is audited, requires explicit approval and is limited in scope/time.
-  * There is no routine storage in the USA. The Access is only transient.
+The processing of personal data for the AI Radiology Alerting and Triage service is primarily carried out within the EU by the Controller and its Processor.
+The critical flow is the onward transfer (Art. 44) from the EU Processor to the US Sub-processor:
 
 ![Data Flow Sketch](images/DataFlow.svg)
+
+**Data Categories Involved**: The data includes DICOM pixel data and headers (MRN, accession number), limited demographics (age/sex), alert artifacts, and operational logs (user IDs, IPs).
+
+**Data Sensitivity**: The data contains "data concerning health" (radiology images, diagnoses), which constitute special categories of personal data pursuant to Article 9(1). The processing of these data, due to their nature, merits specific protection as it could create significant risks to fundamental rights and freedoms.
 
 ### 2. Risk Analysis
 
@@ -30,7 +33,7 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 **Likelihood:** Low (sessions are rare, authorised, and time-boxed).
 
-**Impact:** Very high (special-category data; potential duty to suspend the transfer if SCCs cannot be honoured in practice).
+**Impact:** Very high (special-category data; potential duty to suspend the transfer if SCCs (Art. 46) cannot be honoured in practice).
 
 **Risk R2 — “Gag orders” blocking notification and undermining SCC compliance.**
 
@@ -148,7 +151,7 @@ Group Z: Dominic Behling, Filippo Besana, Dominik Eder, Chang Liu
 
 ## 3.4 Supplementary Measures
 
-To strengthen protection, the following **technical, organizational, and contractual safeguards** are applied:
+To strengthen protection, the following **technical, organizational, and contractual safeguards** are applied (Art. 32):
 
 ### Technical Measures
 - **Encryption at rest and in transit**
@@ -163,6 +166,7 @@ To strengthen protection, the following **technical, organizational, and contrac
   - All break-glass access is logged, timestamped, and reviewed by the EU hospital DPO.
 
 ### Organizational Measures
+
 - **Approval process**
   - Any break-glass access requires explicit authorization by Söderstad Hospital’s controller before activation.
 - **EU-only key management**
@@ -174,6 +178,10 @@ To strengthen protection, the following **technical, organizational, and contrac
   - Clear complaint channels for data subjects to enforce their rights.
 
 ### 4. Conclusion & Accountability
+
+**Conclusion**: Proceed with the transfer, based on the implementation of appropriate supplementary measures.
+
+**Rationale**: The transfer involves special categories of sensitive data to a Third Country without an adequacy decision. However, the use of Standard Contractual Clauses (SCCs) (Art. 46) is bolstered by strong technical supplementary measures. Specifically, the encryption of data combined with the retention of encryption keys exclusively within the EU ensures that, even if the US Sub-processor were subject to a third-country access requirement not authorized by Union law (Art. 48), the necessary confidentiality and protection of the personal data would be maintained, thus upholding the required level of protection (Art. 44)
 
 ## Task 2: MDAV (Maximum Distance to Average Vector) Microaggregation Algorithm
 
