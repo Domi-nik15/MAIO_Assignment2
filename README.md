@@ -168,7 +168,7 @@ To strengthen protection, the following **technical, organizational, and contrac
 ### Organizational Measures
 
 - **Approval process**
-  - Any break-glass access requires explicit authorization by Söderstad Hospital’s controller before activation.
+  - Any break-glass access requires explicit authorization before activation.
 - **EU-only key management**
   - Cryptographic keys remain under hospital/EU control to prevent unilateral access.
 - **Staff training**
